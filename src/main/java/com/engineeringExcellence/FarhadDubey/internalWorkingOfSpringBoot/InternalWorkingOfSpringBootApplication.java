@@ -8,12 +8,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class InternalWorkingOfSpringBootApplication implements CommandLineRunner {
 
-	@Autowired
-	private RazorPayPaymentService paymentService;
+	private final PaymentService paymentService;
 
-//	public InternalWorkingOfSpringBootApplication(RazorPayPaymentService paymentService) {
-//		this.paymentService = paymentService;
-//	}
+	public InternalWorkingOfSpringBootApplication(PaymentService paymentService) {
+		this.paymentService = paymentService;
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(InternalWorkingOfSpringBootApplication.class, args);

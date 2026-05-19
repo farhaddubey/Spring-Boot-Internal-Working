@@ -4,14 +4,13 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConditionalOnProperty(name = "payment.provide", havingValue = "razorpay")
-public class RazorPayPaymentService implements PaymentService {
+@ConditionalOnProperty(name = "payment.provide", havingValue = "stripe")
+public class StripePaymentService implements PaymentService{
 
     @Override
     public String pay() {
-        String payment = "Razorpay Payment";
-        System.out.println("Paid by : " + payment);
+        String payment = "Stripe Payment";
+        System.out.println("Paying from..." + payment);
         return payment;
     }
-
 }
