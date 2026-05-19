@@ -1,5 +1,6 @@
 package com.engineeringExcellence.FarhadDubey.internalWorkingOfSpringBoot;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,11 +8,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class InternalWorkingOfSpringBootApplication implements CommandLineRunner {
 
+	@Autowired
 	private RazorPayPaymentService paymentService;
 
-	public InternalWorkingOfSpringBootApplication(RazorPayPaymentService paymentService) {
-		this.paymentService = paymentService;
-	}
+//	public InternalWorkingOfSpringBootApplication(RazorPayPaymentService paymentService) {
+//		this.paymentService = paymentService;
+//	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(InternalWorkingOfSpringBootApplication.class, args);
